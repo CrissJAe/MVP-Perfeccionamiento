@@ -67,7 +67,7 @@ ADD odbcinst.ini /etc/odbcinst.ini
 ADD php.ini /etc/php/8.2/apache2/php.ini
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+RUN sed -i 's/\r$//' /usr/local/bin/entrypoint.sh && chmod +x /usr/local/bin/entrypoint.sh
 
 EXPOSE 80
 
