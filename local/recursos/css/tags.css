@@ -1,0 +1,56 @@
+.ubb-tag {
+    display: inline-block;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.ubb-tag.success-tag {background-color: #0CA678; color: #fff;}
+.ubb-tag.warning-tag {background-color: #FFD43B; color: #000;}
+.ubb-tag.info-tag {background-color: #146EBE; color: #fff;}
+.ubb-tag.error-tag {background-color: #E03131; color: #fff;}
+
+/* Etiquetas para grilla de datos */
+
+.ubb-datatag-success {
+    display: inline-block;
+    color: #0CA678;
+    font-weight: 600;
+    background-color: #CEEDE4;
+    padding: 2px 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.ubb-datatag-error {
+    display: inline-block;
+    color: #E03131;
+    font-weight: 600;
+    background-color: #F9D6D6;
+    padding: 2px 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.ubb-datatag-other {
+    display: inline-block;
+    color: #146EBE;
+    font-weight: 600;
+    background-color: var(--bg-other);
+    padding: 2px 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}

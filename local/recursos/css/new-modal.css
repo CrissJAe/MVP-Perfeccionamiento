@@ -1,0 +1,76 @@
+/* Modal */
+.close {
+    float: right;
+    font-weight: 700;
+    line-height: 1;
+    display: flex !important;
+}
+
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+
+/* .modal-header .close {
+    margin-top: -2px;
+} */
+
+.ubb-modal .modal-content {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.ubb-modal .modal-content .modal-header {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: 0px;
+    padding: 1px 37px;
+    background: rgb(227,238,247);
+    background: -moz-linear-gradient(90deg, rgba(227,238,247,1) 0%, rgba(114,168,216,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(227,238,247,1) 0%, rgba(114,168,216,1) 100%);
+    background: linear-gradient(90deg, rgba(227,238,247,1) 0%, rgba(114,168,216,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3eef7",endColorstr="#72a8d8",GradientType=1); 
+}
+
+.ubb-modal .modal-content .modal-header .modal-title {
+    color: #183153;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.ubb-modal .modal-content .modal-header .close {
+    font-size: 22px;
+    color: #183153;
+    opacity: 1;
+    text-shadow: none;
+    position: relative;
+    top: 27px;
+}
+
+.ubb-modal .modal-content .modal-header .close .close-icon {
+    font-size: 27px;
+    top: -2px;
+}
+
+.ubb-modal .modal-content .modal-body {
+    padding: 37px;
+    /* font-size: 0.9rem; */ /* Listo */
+    color: #000000; /* Listo */
+}
+
+.ubb-modal .modal-content .modal-footer {
+    background-color: #fff;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: flex;
+    flex-direction: initial !important;
+    justify-content: flex-end;
+    border-top: 0px;
+    padding: 20px 37px;
+}

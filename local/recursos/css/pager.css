@@ -1,0 +1,158 @@
+a {
+    color: var(--color-title);
+    text-decoration: none;
+}
+.pager {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    /* padding-left: 0; */
+    /* margin: 20px 0; */
+    list-style: none;
+    text-align: center;
+    background-color: var(--bg-container);
+    padding: 10px 25px;
+    border-radius: 15px;
+    margin-bottom: 0px;
+    align-items: center;
+}
+.pager .next>a, .pager .next>span {
+    float: right;
+}
+.pager>li>a, .pagination>li>a {
+    border-width: 1px;
+    border-color: #d4dfe3;
+    border-radius: 0;
+    color: var(--color-title);
+    background-color: #fafafa;
+    margin: 0 -1px 0 0;
+    position: relative;
+    z-index: auto;
+}
+
+.pager li>a, .pager li>span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+@media (max-width: 990px) {
+    .pager {
+        display: flex;
+        justify-content: center;
+    }
+}
+/* -------------------------------------------------- */
+/* nuevo estilo inputs */
+.input-daterange input:last-child {
+  border-radius: 7px;
+}
+
+.ubb-files-indicator {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@media (max-width: 500px) {
+    .ubb-files-indicator {
+        flex-direction: column;
+    }
+    .ubb-files-indicator .total-files {
+        margin-bottom: 7px;
+    }
+}
+
+/* Paginador */
+
+/* Botones: Izquierda y Derecha */
+
+.ubb-pagination {
+    display: flex;
+}
+
+.ubb-pagination .pagination-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #146EBE;
+}
+
+.ubb-pagination .pagination-buttons .go-to-firstpage span,
+.ubb-pagination .pagination-buttons .go-to-lastpage span {
+    cursor: pointer;
+}
+
+.ubb-pagination .pagination-buttons .go-to-firstpage span i {
+    margin-right: 4px;
+}
+
+.ubb-pagination .pagination-buttons .go-to-lastpage span i {
+    margin-left: 4px;
+}
+
+.ubb-pagination .pagination-buttons .buttons-pages button {
+    padding: 6px 6px 5px 6px;
+    font-size: 17px;
+}
+
+/* Número de página */
+
+.ubb-pagination .pagination-pages {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.ubb-pagination .pagination-pages input {
+    width: 10ch;
+    height: 37px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px), (min-width: 1200px) {
+    .ubb-pagination .pagination-buttons {
+        width: 60%;
+    }
+    .ubb-pagination .pagination-pages {
+        width: 40%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ubb-pagination .pagination-buttons {
+        width: 55%;
+    }
+    .ubb-pagination .pagination-pages {
+        width: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+    .ubb-pagination {
+        flex-direction: column;
+    }
+    .ubb-pagination .pagination-buttons {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .ubb-pagination .pagination-pages {
+        width: 100%;
+        justify-content: center;
+    }
+}

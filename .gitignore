@@ -1,0 +1,8 @@
+/vendor/
+
+/storage/
+
+/documentos/
+
+.DS_Store
+Thumbs.db

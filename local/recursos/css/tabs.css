@@ -1,0 +1,42 @@
+.ubb-tabs {
+    display: flex;
+}
+
+.ubb-tabs a {
+    flex: 1;
+    /* color: rgba(0, 0, 0, 0.6); */
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0px;
+}
+
+.ubb-tabs a.active,
+.ubb-tabs a.active:hover {
+    color: #146EBE;
+    border-bottom: 2px solid #146EBE;
+}
+
+.ubb-tabs a:hover {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/* Contenido */
+
+.ubb-tab-content {
+    border-top: 1px solid #CCC;
+    margin-top: -1px;
+    padding-top: 25px;
+}
+
+.ubb-tab-content .tab-pane {
+  display: none;
+  font-size: 16px;
+}
+
+.ubb-tab-content .tab-pane.active {
+  display: block;
+}

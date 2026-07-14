@@ -1,0 +1,53 @@
+<?php
+
+
+return [
+    '15111222' => [
+        'rut'     => '15111222',
+        'clave'   => 'mock',
+        'correo'  => 'asoto@ubiobio.cl',
+        'campus'  => 'Concepción',
+        'login'   => 'asoto',
+        'nombres' => 'Andrea Paz',
+        'paterno' => 'Soto',
+        'materno' => 'Riquelme',
+        '_tipo' => 'academico',
+        '_etiqueta' => 'Académica —> tiene un BORRADOR listo para completar y enviar',
+    ],
+    '14222333' => [
+        'rut'     => '14222333',
+        'clave'   => 'mock',
+        'correo'  => 'rfuentes@ubiobio.cl',
+        'campus'  => 'Concepción',
+        'login'   => 'rfuentes',
+        'nombres' => 'Rodrigo Andrés',
+        'paterno' => 'Fuentes',
+        'materno' => 'Molina',
+        '_tipo' => 'academico',
+        '_etiqueta' => 'Académico —> su solicitud PA-2026-001 está ENVIADA',
+    ],
+    '16333444' => [
+        'rut'     => '16333444',
+        'clave'   => 'mock',
+        'correo'  => 'mcarrasco@ubiobio.cl',
+        'campus'  => 'Chillán',
+        'login'   => 'mcarrasco',
+        'nombres' => 'María José',
+        'paterno' => 'Carrasco',
+        'materno' => 'Vidal',
+        '_tipo' => 'academico',
+        '_etiqueta' => 'Académica —> su solicitud PA-2026-002 fue OBSERVADA',
+    ],
+    '11000111' => [
+        'rut'     => '11000111',
+        'clave'   => 'mock',
+        'correo'  => 'revisor.demo@ubiobio.cl',
+        'campus'  => 'Concepción',
+        'login'   => 'revisor.demo',
+        'nombres' => 'Revisor',
+        'paterno' => 'Demo',
+        'materno' => 'Gestión',
+        '_tipo' => 'revisor',
+        '_etiqueta' => 'Usuario de gestión —> usar con rol Director / Decano / Comité',
+    ],
+];

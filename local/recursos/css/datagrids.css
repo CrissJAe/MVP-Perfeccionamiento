@@ -1,0 +1,1026 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
+/*  GRILLAS DE DATOS */
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Grilla de datos #1 *//* Máximo 10 datos */
+
+.ubb-datagrid-typeone .ubb-datagrid-container {
+    background-color: var(--bg-datos-grilla);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+.ubb-datagrid-typeone .ubb-datagrid-container:last-child {
+    margin-bottom: 0px;
+}
+
+.ubb-datagrid-typeone .ubb-datagrid-container .data-row {
+    display: grid;
+    padding: 13px;
+}
+
+.ubb-datagrid-typeone .ubb-datagrid-container .data-row .data-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px;
+}
+
+.ubb-datagrid-typeone .ubb-datagrid-container .data-row .data-column .data-field {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+}
+
+.ubb-datagrid-typeone .ubb-datagrid-container .data-row .data-column .data-title {
+    /* font-size: 0.9rem; */ /* Listo */
+    font-weight: 600;
+    color: var(--color-text); /* Listo */
+}
+
+.ubb-datagrid-typeone .ubb-datagrid-container .data-row .data-column .data-info {
+    /* font-size: 0.9rem; */ /* Listo */
+    font-weight: 400;
+    color: var(--color-text); /* Listo */
+}
+
+.ubb-datagrid-typeone .ubb-datagrid-container .option-set {
+    background-color: var(--bg-hidden-grilla);
+    padding: 13px;
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+/* Media queries */
+
+/* Anchura mínima: 1200px */
+@media (min-width: 1200px) {
+    .ubb-datagrid-typeone .ubb-datagrid-container .data-row {
+        grid-template-columns: 15% repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+}
+
+/* Anchura entre: 992px y 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .ubb-datagrid-typeone .ubb-datagrid-container .data-row {
+        grid-template-columns: 10% repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+}
+
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .ubb-datagrid-typeone .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 30px;
+    }
+    .ubb-datagrid-typeone .ubb-datagrid-container .data-row .icon-file {
+        grid-column: 1 / 3;
+    }
+    .ubb-datagrid-typeone .ubb-datagrid-container .data-row dl:nth-of-type(1) {
+        grid-column: 1;
+    }
+    .ubb-datagrid-typeone .ubb-datagrid-container .data-row dl:nth-of-type(2) {
+        grid-column: 2;
+    }
+}
+
+/* Anchura máxima: 767px */
+@media (max-width: 767px) {
+    .ubb-datagrid-typeone .ubb-datagrid-container .data-row {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 10px;
+    }
+    .ubb-datagrid-typeone .ubb-datagrid-container .data-row .icon-file {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/*  Grilla de datos #2 *//* Máximo 10 datos */
+
+.ubb-datagrid-typetwo .ubb-datagrid-container {
+    background-color: var(--bg-datos-grilla);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+.ubb-datagrid-typetwo .ubb-datagrid-container:last-child {
+    margin-bottom: 0px;
+}
+
+.ubb-datagrid-typetwo .ubb-datagrid-container .data-row {
+    display: grid;
+    padding: 13px;
+    gap: 30px;
+    margin: 0px;
+}
+
+.ubb-datagrid-typetwo .ubb-datagrid-container .data-row .data-column .data-title {
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.ubb-datagrid-typetwo .ubb-datagrid-container .data-row .data-column .data-info {
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+    font-weight: 400;
+    margin: auto;
+}
+
+.ubb-datagrid-typetwo .ubb-datagrid-container .option-set {
+    background-color: var(--bg-hidden-grilla);
+    padding: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+/* Media queries */
+
+/* Anchura mínima: 1200px */
+@media (min-width: 1200px) {
+    .ubb-datagrid-typetwo .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+/* Anchura entre: 992px y 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .ubb-datagrid-typetwo .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .ubb-datagrid-typetwo .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+}
+
+/* Anchura máxima: 767px */
+@media (max-width: 767px) {
+    .ubb-datagrid-typetwo .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/*  Grilla de datos #3 *//* Máximo 7 datos */
+
+.ubb-datagrid-typethree .ubb-datagrid-container {
+    background-color: var(--bg-datos-grilla);;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+.ubb-datagrid-typethree .ubb-datagrid-container:last-child {
+    margin-bottom: 0px;
+}
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row {
+    display: grid;
+    gap: 30px;
+    padding: 13px;
+}
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row .data-column .data-title {
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row .data-column .data-info {
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+    font-weight: 400;
+}
+
+/* Botón detalles */
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row .button-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypethree {
+    /* font-size: 0.9rem; */ /* Listo */
+    color: #146EBE;
+    padding: 4px 7px;
+    border: 2px solid #146EBE;
+    background-color: transparent;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    cursor: pointer;
+}
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypethree:hover {
+    background-color: #146EBE;
+    color: #FFF;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypethree .rotate {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypethree i {
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypethree.active {
+    background-color: #146EBE;
+    color: #FFFFFF;
+}
+
+/* Contenedor collapsable */
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row-collapse {
+    display: none;
+}
+
+.ubb-datagrid-typethree .ubb-datagrid-container .data-row-collapse .option-set {
+    background-color: var(--bg-hidden-grilla);
+    padding: 13px;
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+/* Media queries */
+
+/* Anchura mínima: 1200px */
+@media (min-width: 1200px) {
+    .ubb-datagrid-typethree .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(var(--cols), 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+/* Anchura máximo: 1199px */
+@media (max-width: 1199px) {
+    .ubb-datagrid-typethree .ubb-datagrid-container .data-row .button-details {
+        padding-top: 23px;
+        justify-content: center;
+    }
+}
+
+/* Anchura entre: 992px y 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .ubb-datagrid-typethree .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+    .ubb-datagrid-typethree .ubb-datagrid-container .data-row .button-details {
+        grid-column: 1 / 5;
+    }
+}
+
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .ubb-datagrid-typethree .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+    .ubb-datagrid-typethree .ubb-datagrid-container .data-row .button-details {
+        grid-column: 1 / 4;
+    }
+}
+
+/* Anchura máxima: 767px */
+@media (max-width: 767px) {
+    .ubb-datagrid-typethree .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+    .ubb-datagrid-typethree .ubb-datagrid-container .data-row .button-details {
+        grid-column: 1 / 3;
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/*  Grilla de datos #4 *//* Máximo 7 datos */
+
+.ubb-datagrid-typefour .datagrid-row {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.ubb-datagrid-typefour .datagrid-row:last-child {
+    margin-bottom: 0px;
+}
+
+.ubb-datagrid-typefour .ubb-header-row {
+    display: grid;
+    /* grid-template-columns: repeat(8, 1fr); */
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    background-color: var(--bg-head-grilla);;
+    padding: 15px 20px;
+}
+
+.ubb-datagrid-typefour .ubb-header-row .data-title {
+    font-weight: 600;
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container {
+    background-color: var(--bg-datos-grilla);
+    padding: 7px;
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row {
+    display: grid;
+    gap: 30px;
+    background-color: var(--bg-datos-grilla);
+    padding: 13px;
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row .data-info {
+    font-weight: 400;
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+}
+
+/* Botón detalles */
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row .button-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypefour {
+    /* font-size: 0.9rem; */ /* Listo */
+    color: #146EBE;
+    padding: 4px 7px;
+    border: 2px solid #146EBE;
+    background-color: transparent;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    cursor: pointer;
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypefour:hover {
+    background-color: #146EBE;
+    color: #FFF;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypefour .rotate {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypefour i {
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypefour.active {
+    background-color: #146EBE;
+    color: #FFFFFF;
+}
+
+/* Contenedor collapsable */
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row-collapse {
+    display: none;
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row-collapse .option-set {
+    background-color: var(--bg-hidden-grilla);
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+    padding: 13px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+/* Media queries */
+
+/* Anchura mínima: 992px */
+@media (min-width: 992px) {
+    .ubb-datagrid-typefour .ubb-datagrid-container .data-row {
+        /* grid-template-columns: repeat(8, 1fr); */
+        grid-template-columns: repeat(var(--cols), 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+/* Anchura máxima: 991px (Fila de encabezados oculta y atributo data-title) */
+@media (max-width: 991px) {
+    .ubb-datagrid-typefour .ubb-header-row {
+        display: none;
+    }
+    .ubb-datagrid-typefour .ubb-datagrid-container .data-row .data-info {
+        /* font-size: 0.9rem; */ /* Listo */
+        font-weight: 400;
+        color: var(--color-text); /* Listo */
+    }
+    .ubb-datagrid-typefour .ubb-datagrid-container .data-row .data-info::before {
+        content: attr(data-title);
+        display: block;
+        /* font-size: 0.9rem; */ /* Listo */
+        color: var(--color-text); /* Listo */
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+    .ubb-datagrid-typefour .ubb-datagrid-container .data-row .button-details {
+        padding-top: 23px;
+        justify-content: center;
+    }
+}
+
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .ubb-datagrid-typefour .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+    .ubb-datagrid-typefour .ubb-datagrid-container .data-row .button-details {
+        grid-column: 1 / 4;
+    }
+}
+
+/* Anchura máxima: 767px */
+@media (max-width: 767px) {
+    .ubb-datagrid-typefour .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+    .ubb-datagrid-typefour .ubb-datagrid-container .data-row .button-details {
+        grid-column: 1 / 3;
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/*  Grilla de datos #5 */
+
+/* Grilla A: Máximo 7 datos */
+
+.ubb-datagrid-typefive .datagrid-row {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.ubb-datagrid-typefive .datagrid-row:last-child {
+    margin-bottom: 0px;
+}
+
+.ubb-datagrid-typefive .ubb-header-row {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    /* grid-template-columns: repeat(8, 1fr); */
+    grid-template-rows: auto;
+    gap: 30px;
+    background-color: var(--bg-head-grilla);;
+    padding: 15px 20px;
+}
+
+.ubb-datagrid-typefive .ubb-header-row .data-title {
+    font-weight: 600;
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container {
+    background-color: var(--bg-datos-grilla);
+    padding: 7px;
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row {
+    display: grid;
+    gap: 30px;
+    background-color: var(--bg-datos-grilla);
+    padding: 13px;
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row .data-info {
+    font-weight: 400;
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+}
+
+/* Botón detalles */
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row .button-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypefive {
+    /* font-size: 0.9rem; */ /* Listo */
+    color: #146EBE;
+    padding: 4px 7px;
+    border: 2px solid #146EBE;
+    background-color: transparent;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    cursor: pointer;
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypefive:hover {
+    background-color: #146EBE;
+    color: #FFF;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypefive .rotate {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypefive i {
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row .button-details .togglebutton-gridtypefive.active {
+    background-color: #146EBE;
+    color: #FFFFFF;
+}
+
+/* Contenedor collapsable */
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row-collapse {
+    display: none;
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row-collapse .option-set {
+    background-color: var(--bg-hidden-grilla);
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+    padding: 13px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+/* Media queries */
+
+/* Anchura mínima: 992px */
+@media (min-width: 992px) {
+    .ubb-datagrid-typefive .ubb-datagrid-container .data-row {
+        /* grid-template-columns: repeat(8, 1fr); */
+        grid-template-columns: repeat(var(--cols), 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+/* Anchura máxima: 991px (Fila de encabezados oculta y atributo data-title) */
+@media (max-width: 991px) {
+    .ubb-datagrid-typefive .ubb-header-row {
+        display: none;
+    }
+    .ubb-datagrid-typefive .ubb-datagrid-container .data-row .data-info {
+        /* font-size: 0.9rem; */ /* Listo */
+        font-weight: 400;
+        color: var(--color-text); /* Listo */
+    }
+    .ubb-datagrid-typefive .ubb-datagrid-container .data-row .data-info::before {
+        content: attr(data-title);
+        display: block;
+        /* font-size: 0.9rem; */ /* Listo */
+        color: var(--color-text); /* Listo */
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+    .ubb-datagrid-typefive .ubb-datagrid-container .data-row .button-details {
+        padding-top: 23px;
+        justify-content: center;
+    }
+}
+
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .ubb-datagrid-typefive .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+    .ubb-datagrid-typefive .ubb-datagrid-container .data-row .button-details {
+        grid-column: 1 / 4;
+    }
+}
+
+/* Anchura máxima: 767px */
+@media (max-width: 767px) {
+    .ubb-datagrid-typefive .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+    .ubb-datagrid-typefive .ubb-datagrid-container .data-row .button-details {
+        grid-column: 1 / 3;
+    }
+}
+
+/* Sub-Grilla */
+
+/* Grilla B: Máximo 10 datos */
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row-collapse .datagrid-collapse {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(2, auto);
+    padding: 13px;
+    gap: 30px;
+    background-color: var(--bg-hidden-grilla);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    margin-bottom: 7px;
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row-collapse .datagrid-collapse .data-info {
+    /* font-size: 0.9rem; */ /* Listo */
+    font-weight: 400;
+    color: var(--color-text); /* Listo */
+}
+
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row-collapse .datagrid-collapse .data-info::before {
+    content: attr(data-title);
+    display: block;
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+/* Media queries sub-grilla */
+
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .ubb-datagrid-typefive .ubb-datagrid-container .data-row-collapse .datagrid-collapse {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+}
+
+/* Anchura máxima: 767px */
+@media (max-width: 767px) {
+    .ubb-datagrid-typefive .ubb-datagrid-container .data-row-collapse .datagrid-collapse {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/*  Grilla de datos #6 */
+
+.ubb-datagrid-typesix .datagrid-row {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.ubb-datagrid-typesix .datagrid-row:last-child {
+    margin-bottom: 0px;
+}
+
+.ubb-datagrid-typesix .ubb-header-row {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    /* grid-template-columns: repeat(8, 1fr); */
+    grid-template-rows: auto;
+    gap: 30px;
+    background-color: var(--bg-head-grilla);;
+    padding: 15px 20px;
+}
+
+.ubb-datagrid-typesix .ubb-header-row .data-title {
+    font-weight: 600;
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+}
+
+.ubb-datagrid-typesix .ubb-datagrid-container {
+    background-color: var(--bg-datos-grilla);
+    padding: 7px;
+}
+
+.ubb-datagrid-typesix .ubb-datagrid-container .data-row {
+    display: grid;
+    gap: 30px;
+    background-color: var(--bg-datos-grilla);
+    padding: 13px;
+}
+
+.ubb-datagrid-typesix .ubb-datagrid-container .data-row .data-info {
+    font-weight: 400;
+    /* font-size: 0.9rem; */ /* Listo */
+    color: var(--color-text); /* Listo */
+}
+
+/* Media queries */
+
+/* Anchura mínima: 992px */
+@media (min-width: 992px) {
+    .ubb-datagrid-typesix .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(var(--cols), 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+/* Anchura máxima: 991px (Fila de encabezados oculta y atributo data-title) */
+@media (max-width: 991px) {
+    .ubb-datagrid-typesix .ubb-header-row {
+        display: none;
+    }
+    .ubb-datagrid-typesix .ubb-datagrid-container .data-row .data-info {
+        /* font-size: 0.9rem; */ /* Listo */
+        font-weight: 400;
+        color: var(--color-text); /* Listo */
+    }
+    .ubb-datagrid-typesix .ubb-datagrid-container .data-row .data-info::before {
+        content: attr(data-title);
+        display: block;
+        /* font-size: 0.9rem; */ /* Listo */
+        color: var(--color-text); /* Listo */
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+}
+
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .ubb-datagrid-typesix .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+/* Anchura máxima: 767px */
+@media (max-width: 767px) {
+    .ubb-datagrid-typesix .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/*  Grilla de datos #7 */
+
+.ubb-datagrid-typeseven .ubb-datagrid-container .header-row {
+    margin-bottom: 25px;
+}
+
+.ubb-datagrid-typeseven .ubb-datagrid-container .header-row .header-title {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background-color: var(--bg-container);
+    margin: 0;
+    padding-right: 20px;
+    font-size: 22px;
+}
+
+.ubb-datagrid-typeseven .ubb-datagrid-container .header-row .header-line {
+    display: block;
+    position: relative;
+    background-color: #CCCCCC;
+    height: 1px;
+    z-index: 1;
+    bottom: 12px;
+}
+
+.ubb-datagrid-typeseven .ubb-datagrid-container .data-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(1, 1fr);
+    gap: 30px;  
+    margin-bottom: 8px;    
+}
+
+.ubb-datagrid-typeseven .ubb-datagrid-container .data-row .data-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0px;
+}
+
+.ubb-datagrid-typeseven .ubb-datagrid-container .data-row .data-column .data-field {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+}
+
+.ubb-datagrid-typeseven .ubb-datagrid-container .data-row .data-column .data-title {
+    /* font-size: 0.9rem; */ /* Listo */
+    font-weight: 600;
+}
+
+.ubb-datagrid-typeseven .ubb-datagrid-container .data-row .data-column .data-info {
+    /* font-size: 0.9rem; */ /* Listo */
+    font-weight: 400;
+}
+
+/* Media queries */
+
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .ubb-datagrid-typeseven .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 15px 30px;
+    }
+}
+
+/* Anchura mínima: 767px */
+@media (max-width: 767px) {
+    .ubb-datagrid-typeseven .ubb-datagrid-container .data-row {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 15px;
+    }
+}
+
+.ubb-datagrid-typefour .ubb-header-row .two-columns,
+.ubb-datagrid-typefive .ubb-header-row .two-columns,
+.ubb-datagrid-typesix .ubb-header-row .two-columns {
+  grid-column: span 2;
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container .data-row .two-columns,
+.ubb-datagrid-typefive .ubb-datagrid-container .data-row .two-columns,
+.ubb-datagrid-typesix .ubb-datagrid-container .data-row .two-columns {
+  grid-column: span 2;
+}
+
+.ubb-datagrid-typefour .ubb-datagrid-container .alert-row,
+.ubb-datagrid-typefive .ubb-datagrid-container .alert-row,
+.ubb-datagrid-typesix .ubb-datagrid-container .alert-row {
+    margin: 15px 22px;
+}
+
+/* Accesibilidad: wrapper de par dt/dd con foco único */
+.data-field:focus-visible .data-title,
+.data-field:focus-visible .data-info {
+    outline: 2px solid #146EBE;
+    outline-offset: 1px;
+}

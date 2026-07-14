@@ -1,0 +1,186 @@
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0px;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table>thead>tr {
+    color: #707070;
+    font-weight: 400;
+}
+
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+}
+
+th {
+    text-align: left;
+    text-align: left;
+    background: var(--color-table-head);
+    color: white;
+}
+
+tr:hover {
+    background-color: var(--color-table-hover);
+}
+
+.table>tbody>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    border-top: 1px solid var(--color-border);
+}
+
+/* tabla de datepicker */
+
+.datepicker table tr th {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 0px;
+  border: none;
+  background-color: transparent;
+  color: #333333;
+}
+
+.datepicker table tr:hover{
+    background-color: transparent;
+}
+
+.datepicker.dropdown-menu th, .datepicker.dropdown-menu td {
+  padding: 0px;
+}
+
+/*1450px antes del 13-02-15; se agregaron 3000px por las tablas de asistente social->(BienestarEstudiantil)Generar ficha*/
+@media screen and (max-width: 1450) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid var(--color-border);
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media screen and (max-width: 3000px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid var(--color-border);
+        -webkit-overflow-scrolling: touch;
+    }
+    #siempre_responsivo {
+        width: 100%!important;
+        margin-bottom: 15px!important;
+        overflow-y: hidden!important;
+        overflow-x: auto!important;
+        -ms-overflow-style: -ms-autohiding-scrollbar!important;
+        border: 1px solid var(--color-border)!important;
+        -webkit-overflow-scrolling: touch!important;
+    }
+    .siempre_responsivo {
+        width: 100%!important;
+        margin-bottom: 15px!important;
+        overflow-y: hidden!important;
+        overflow-x: auto!important;
+        -ms-overflow-style: -ms-autohiding-scrollbar!important;
+        border: 1px solid var(--color-border) !important;
+        -webkit-overflow-scrolling: touch!important;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+    
+    table {
+        display: block;
+        width: 100%;
+    }
+
+    .table-responsive {
+        border: none;
+    }
+
+    .table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .table-row {
+        display: block;
+        margin-bottom: 20px;
+        padding: 20px;
+        position: relative;
+        border: 1px solid var(--color-border);
+        border-radius: 5px;
+    }
+
+    /* Transformar celdas en filas verticales */
+    .table-row td {
+        display: block;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--color-border);
+        border-left: none;
+        border-right: none;
+        position: relative;
+        min-height: auto;
+        white-space: normal;
+        border-top: none;
+    }
+
+    .table-row td[data-label="Información"] {
+        border-bottom: none;
+        padding-top: 15px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .table-row td:last-child {
+        border-bottom: none;
+        padding-top: 15px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Etiquetas de campo para mobile */
+    .table-row td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 4px;
+        font-size: 0.85em;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+
+    /* Contenido de las celdas */
+    .table-row td>* {
+        flex: 1;
+        text-align: right;
+    }
+
+    /* Ajustes para la celda de acciones */
+    .actions-cell {
+        text-align: center !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actions-cell>* {
+        text-align: center;
+    }
+
+    .table>tbody>tr>td {
+        border-top:none;
+    }
+}

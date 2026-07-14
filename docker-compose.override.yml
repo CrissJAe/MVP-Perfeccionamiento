@@ -1,0 +1,31 @@
+services:
+  web:
+    volumes:
+      - .:/var/www/perfeccionamiento
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    container_name: perfeccionamiento-mssql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Ubb.Perfec2026"
+      MSSQL_PID: "Developer"
+      TZ: "America/Santiago"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+      - ./local/db:/db:ro
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'Ubb.Perfec2026' -Q 'SELECT 1' -b",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+volumes:
+  mssql-data:

@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  web:
+    build: ./docker/
+    image: "perfeccionamiento:php82"
+    container_name: "perfeccionamiento-php82"
+    ports:
+      - "80:80"
+    volumes:
+      - ./env:/home/
+      - .:/var/www/

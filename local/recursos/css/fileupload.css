@@ -1,0 +1,136 @@
+/* File upload */
+
+.ubb-file-upload .file-upload-container {
+    background-color: transparent;
+    border: 1px dashed #146EBE;
+    color: #146EBE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    margin-bottom: 7px;
+}
+
+.ubb-file-upload .file-upload-container .file-upload-caption {
+    font-size: 16px; /* Listo */
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/*  Grilla de archivos */
+
+.ubb-file-upload .table-file-uploaded .file-datagrid .datagrid-row {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    margin-bottom: 7px;
+}
+
+.ubb-file-upload .table-file-uploaded .file-datagrid .datagrid-row:last-child {
+    margin-bottom: 0px;
+}
+
+.ubb-file-upload .table-file-uploaded .file-datagrid .header-row {
+    display: grid;
+    grid-template-columns: 20% repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    background-color: var(--bg-head-grilla);
+    padding: 15px 20px;
+}
+
+.ubb-file-upload .table-file-uploaded .file-datagrid .header-row .data-title {
+    font-weight: 600;
+    /* font-size: 16px; */
+    /* color: #000000; */
+}
+
+.ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container {
+    background-color: var(--bg-datos-grilla);;
+    padding: 7px;
+}
+
+.ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container .data-row {
+    display: grid;
+    gap: 30px;
+    background-color: var(--bg-datos-grilla);;
+    padding: 13px;
+}
+
+.ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container .data-row .data-info {
+    font-weight: 400;
+    /* font-size: 16px;  */
+    /* color: #000000; */
+}
+
+.ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container .data-row .data-info[data-title="Nombre"] {
+    white-space: normal; /* Espacios en blanco y saltos de línea */
+    overflow-wrap: break-word; /* Evita desbordamiento del texto cuando la palabra es muy larga, generando un quiebre */
+    word-wrap: break-word; /* Evita desbordamiento del texto cuando la palabra es muy larga, generando un quiebre */
+}
+
+.ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container .data-row .option-set {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container .data-row .option-set i {
+    /* color: #000000;  */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Media queries */
+
+/* Anchura mínima: 992px */
+@media (min-width: 992px) {
+    .ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container .data-row {
+        grid-template-columns: 20% repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+/* Anchura máxima: 991px (Fila de encabezados oculta y atributo data-title) */
+@media (max-width: 991px) {
+    .ubb-file-upload .table-file-uploaded .file-datagrid .header-row {
+        display: none;
+    }
+    .ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container .data-row .data-info {
+        /* font-size: 16px;  */
+        font-weight: 400;
+        /* color: #000000; */
+    }
+    .ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container .data-row .data-info::before {
+        content: attr(data-title);
+        display: block;
+        /* font-size: 16px;  */
+        /* color: #000000; */
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+}
+
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+/* Anchura máxima: 767px */
+@media (max-width: 767px) {
+    .ubb-file-upload .table-file-uploaded .file-datagrid .file-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}

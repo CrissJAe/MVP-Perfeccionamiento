@@ -1,0 +1,21 @@
+/* =====================================================
+   Ajustes SOLO-LOCAL: compensan la ausencia del
+   cascarón de la intranet (navbar + sidebar).
+   No desplegar: en producción el shell real existe.
+   ===================================================== */
+
+/* El page-header es sticky/fixed pensado para pegarse bajo
+   la navbar; sin ella flota sobre el contenido al scrollear */
+.ubb-container-page-header,
+.page-header {
+    position: static !important;
+    top: auto !important;
+}
+
+/* Anular el corrimiento reservado para la sidebar (~280px) */
+.ubb-container-page-header,
+.ubb-container,
+.page-content {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}

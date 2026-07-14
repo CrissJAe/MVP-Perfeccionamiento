@@ -1,0 +1,364 @@
+/* ubb-datagrid-typefour cambiar a ubb-datagrid-typetable
+   ubb-datagrid-typeseven cambiar a ubb-datagrid-typeinfo
+*/
+
+/* Etiquetas para grilla de datos */
+
+/* .ubb-datatag-success {
+    display: inline-block;
+    width: 100%;
+    color: #0CA678;
+    font-weight: 600;
+    background-color: var(--bg-success);
+    padding: 2px 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    text-align: center;
+} */
+
+/* .ubb-datatag-error {
+    display: inline-block;
+    width: 100%;
+    color: #D94E4E;
+    font-weight: 600;
+    background-color: var(--bg-error);
+    padding: 2px 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    text-align: center;
+} */
+
+/* .ubb-datatag-other {
+    display: inline-block;
+    width: 100%;
+    color: #146EBE;
+    font-weight: 600;
+    background-color: var(--bg-other);
+    padding: 2px 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    text-align: center;
+} */
+
+/*  Grilla de datos #4 */
+/* Máximo 7 datos */
+.ubb-datagrid-typetable .datagrid-row {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.ubb-datagrid-typetable .ubb-header-row {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    background-color: var(--bg-head-grilla);
+    padding: 15px 30px;
+}
+
+.ubb-datagrid-typetable .ubb-header-row .data-title {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.data-center {
+    text-align: center;
+}
+
+.ubb-datagrid-typetable .ubb-datagrid-container {
+    background-color: var(--bg-datos-grilla);
+    padding: 7px;
+}
+
+.ubb-datagrid-typetable .ubb-datagrid-container .alert-row {
+    margin: 15px 22px;
+}
+
+.ubb-datagrid-typetable .ubb-datagrid-container .data-row {
+    display: grid;
+    gap: 20px;
+    background-color: var(--bg-datos-grilla);
+    padding: 15px 23px;
+}
+
+.ubb-datagrid-typetable .ubb-datagrid-container .data-row .data-info {
+    font-weight: 400;
+    color: var(--color-text);
+    margin: auto 0;
+}
+
+/* columna de 2 espacios */
+.ubb-datagrid-typetable .ubb-header-row .two-columns {
+    grid-column: span 2;
+}
+
+.ubb-datagrid-typetable .ubb-datagrid-container .data-row .two-columns {
+    grid-column: span 2;
+}
+
+/* Contenedor collapsable */
+
+.ubb-datagrid-typetable .ubb-datagrid-container .data-row-collapse {
+    display: none;
+}
+
+.ubb-datagrid-typetable .ubb-datagrid-container .data-row-collapse .option-set {
+    background-color: var(--bg-hidden-grilla);
+    padding: 15px 23px;
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+    padding: 23px;
+    border-radius: 0px 0px 3px 3px;
+    -webkit-border-radius: 0px 0px 3px 3px;
+    -moz-border-radius: 0px 0px 3px 3px;
+    -ms-border-radius: 0px 0px 3px 3px;
+    -o-border-radius: 0px 0px 3px 3px;
+}
+
+/* Media queries */
+/* Anchura mínima: 992px */
+@media (min-width: 992px) {
+    .ubb-datagrid-typetable .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(var(--cols), 1fr);
+        grid-template-rows: auto;
+    }
+
+}
+
+/* Anchura máxima: 991px (Fila de encabezados oculta y atributo data-title) */
+@media (max-width: 991px) {
+    .ubb-datagrid-typetable .ubb-header-row {
+        display: none;
+    }
+
+    .ubb-datagrid-typetable .ubb-datagrid-container .data-row .data-info {
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--color-text);
+        margin: 0;
+    }
+
+    .ubb-datagrid-typetable .ubb-datagrid-container .data-row .data-info::before {
+        content: attr(data-title);
+        display: block;
+        font-size: 15px;
+        color: var(--color-text);
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+}
+
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .ubb-datagrid-typetable .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+/* columna de 2 espacios ahora es de 1 */
+    .ubb-datagrid-typetable .ubb-header-row .two-columns {
+        grid-column: span 1;
+        /* Hace que la columna “Nombre” ocupe dos espacios */
+    }
+
+    .ubb-datagrid-typetable .ubb-datagrid-container .data-row .two-columns {
+        grid-column: span 1;
+    }
+}
+
+/* Anchura máxima: 767px */
+@media (max-width: 767px) {
+    .ubb-datagrid-typetable .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+/* columna de 2 espacios ahora es de 1 */
+    .ubb-datagrid-typetable .ubb-header-row .two-columns {
+        grid-column: span 1;
+    }
+
+    .ubb-datagrid-typetable .ubb-datagrid-container .data-row .two-columns {
+        grid-column: span 1;
+    }
+}
+
+/* Skeleton placeholder */
+.loading-skeleton .data-info {
+    background: var(--bg-datos-grilla);
+    height: 4.2rem;
+    margin: 15px 0;
+    border-radius: 7px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1.4;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*  Grilla de datos #7 */
+
+.ubb-datagrid-typeinfo .ubb-datagrid-container .header-row {
+    margin-bottom: 25px;
+}
+
+.ubb-datagrid-typeinfo .ubb-datagrid-container .header-row .header-title {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background-color: var(--bg-container);
+    margin: 0;
+    padding-right: 20px;
+    font-size: 22px;
+}
+
+.ubb-datagrid-typeinfo .ubb-datagrid-container .header-row .header-line {
+    display: block;
+    position: relative;
+    background-color: #CCCCCC;
+    height: 1px;
+    z-index: 1;
+    bottom: 12px;
+}
+
+.ubb-datagrid-typeinfo .ubb-datagrid-container .data-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 30px 100px;
+    margin-bottom: 15px;
+}
+
+.ubb-datagrid-typeinfo .ubb-datagrid-container .data-row .data-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 15px 30px;
+}
+
+.ubb-datagrid-typeinfo .ubb-datagrid-container .data-row .data-column .data-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.ubb-datagrid-typeinfo .ubb-datagrid-container .data-row .data-column .data-info {
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: initial;
+    width: 200px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Media queries */
+/* Anchura entre: 768px y 991px */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .ubb-datagrid-typeinfo .ubb-datagrid-container .data-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 15px 30px;
+    }
+}
+
+/* Anchura mínima: 767px */
+@media (max-width: 767px) {
+    .ubb-datagrid-typeinfo .ubb-datagrid-container .data-row {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 15px;
+    }
+
+    .ubb-datagrid-typeinfo .ubb-datagrid-container .data-row .data-column {
+        grid-template-columns: 1fr;          
+        grid-template-rows: repeat(auto-fill, auto);
+        gap: 15px;
+    }
+}
+
+/*  Grilla de datos Modal (siempre tabla) */
+.ubb-datagrid-modal .datagrid-row {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.ubb-datagrid-modal .ubb-header-row {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    background-color: var(--bg-head-grilla);
+    padding: 15px 30px;
+}
+
+.ubb-datagrid-modal .ubb-header-row .data-title {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.ubb-datagrid-modal .ubb-datagrid-container {
+    background-color: var(--bg-datos-grilla);
+    padding: 0;
+}
+
+.ubb-datagrid-modal .ubb-datagrid-container .data-row {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    background-color: var(--bg-datos-grilla);
+    padding: 15px 30px;
+    align-items: start;
+    border-radius: 7px;
+}
+
+.ubb-datagrid-modal .ubb-datagrid-container .data-row .data-info {
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.ubb-datagrid-modal .ubb-header-row .three-columns {
+    grid-column: span 3;
+}
+
+.ubb-datagrid-modal .ubb-datagrid-container .data-row .three-columns {
+    grid-column: span 3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ubb-datagrid-modal .ubb-header-row .two-columns {
+    grid-column: span 2;
+}
+
+.ubb-datagrid-modal .ubb-datagrid-container .data-row .two-columns {
+    grid-column: span 2;
+}

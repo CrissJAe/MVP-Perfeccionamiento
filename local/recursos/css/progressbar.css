@@ -1,0 +1,122 @@
+/* Multi-step progress bar */
+ 
+.ubb-steps-progressbar .progressbar-container {
+    position: relative;
+    margin-bottom: 40px;
+}
+ 
+.ubb-steps-progressbar .progressbar-container .progressbar-grey-line {
+    position: absolute;
+    top: 23px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #f3f4f6;
+    z-index: 0;
+}
+ 
+.ubb-steps-progressbar .progressbar-container .progressbar-line-container .progressbar-blue-line {
+    height: 4px;
+    background-color: #146EBE;
+    width: 0%;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -ms-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+}
+ 
+.ubb-steps-progressbar .progressbar-container .progressbar-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+ 
+.ubb-steps-progressbar .progressbar-container .progressbar-steps .progress-step {
+    background: #f3f4f6;
+    color: #CCCCCC;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+ 
+.ubb-steps-progressbar .progressbar-container .progressbar-steps .progress-step.active {
+    background-color: #146EBE;
+    color: #fff;
+}
+ 
+.ubb-steps-progressbar .multistep-form .step-panel {
+    display: none;
+}
+ 
+.ubb-steps-progressbar .multistep-form .step-panel p {
+    margin-bottom: 25px;
+    /* font-size: 0.9rem; */ /* Listo */
+}
+ 
+.ubb-steps-progressbar .multistep-form .step-panel.active {
+    display: block;
+}
+ 
+.ubb-steps-progressbar .multistep-form .step-panel .finalstep-message {
+    display: none;
+}
+ 
+.ubb-steps-progressbar .multistep-form .progressbar-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+ 
+/* Barra de progreso oculta en el paso final */
+ 
+.ubb-steps-progressbar .progressbar-container.hidden {
+    display: none;
+}
+ 
+/* Paso final: Mensaje y botón "Volver al inicio" */
+ 
+.ubb-steps-progressbar .multistep-form .step-panel .finalstep-message {
+    text-align: center;
+}
+ 
+.ubb-steps-progressbar .multistep-form .step-panel .finalstep-message .finalstep-success-message {
+    background-color: #CEEDE4;
+    padding: 25px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    margin-bottom: 25px;
+}
+ 
+.ubb-steps-progressbar .multistep-form .step-panel .finalstep-message .finalstep-success-message h4 {
+    margin: 0px;
+}
+ 
+.ubb-steps-progressbar .multistep-form .step-panel .finalstep-message .finalstep-success-message i {
+    font-size: 35px;
+    color: #0CA678;
+    margin-bottom: 10px;
+}
+ 
+/* Media queries */
+ 
+/* Anchura máxima: 767px */
+@media (max-width: 767px) {
+    .ubb-steps-progressbar .progressbar-container .progressbar-steps .progress-step {
+        margin-bottom: 10px;
+    }
+}

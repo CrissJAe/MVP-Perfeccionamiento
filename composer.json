@@ -1,0 +1,22 @@
+{
+    "name": "ubb/perfeccionamiento",
+    "description": "Módulo Perfeccionamiento Académico - UBB",
+    "type": "project",
+    "require": {
+        "php": "^8.2",
+        "smarty/smarty": "^4.5",
+        "mpdf/mpdf": "^8.2",
+        "openspout/openspout": "^4"
+    },
+    "autoload": {
+        "psr-4": {
+            "UBB\\Intranet\\Perfeccionamiento\\": "class/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^7.4"
+    }
+}
