@@ -2,6 +2,9 @@ services:
   web:
     volumes:
       - .:/var/www/perfeccionamiento
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
 
   mssql:
     image: mcr.microsoft.com/mssql/server:2017-latest
@@ -26,6 +29,23 @@ services:
       timeout: 5s
       retries: 10
       start_period: 20s
+
+  db-init:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    container_name: perfeccionamiento-db-init
+    depends_on:
+      mssql:
+        condition: service_healthy
+    volumes:
+      - ./local/db:/db:ro
+    entrypoint: >
+      bash -c "
+      /opt/mssql-tools/bin/sqlcmd -I -f 65001 -S mssql -U sa -P 'Ubb.Perfec2026' -i /db/00_bases.sql &&
+      /opt/mssql-tools/bin/sqlcmd -I -f 65001 -S mssql -U sa -P 'Ubb.Perfec2026' -d Perfeccionamiento -i /db/01_esquema.sql &&
+      /opt/mssql-tools/bin/sqlcmd -I -f 65001 -S mssql -U sa -P 'Ubb.Perfec2026' -i /db/02_vra_mock.sql &&
+      /opt/mssql-tools/bin/sqlcmd -I -f 65001 -S mssql -U sa -P 'Ubb.Perfec2026' -i /db/03_seed.sql
+      "
+    restart: "no"
 
 volumes:
   mssql-data:
