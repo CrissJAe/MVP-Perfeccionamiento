@@ -42,7 +42,7 @@ services:
       bash -c "
       /opt/mssql-tools/bin/sqlcmd -I -f 65001 -S mssql -U sa -P 'Ubb.Perfec2026' -i /db/00_bases.sql &&
       /opt/mssql-tools/bin/sqlcmd -I -f 65001 -S mssql -U sa -P 'Ubb.Perfec2026' -d Perfeccionamiento -i /db/01_esquema.sql &&
-      /opt/mssql-tools/bin/sqlcmd -I -f 65001 -S mssql -U sa -P 'Ubb.Perfec2026' -i /db/02_vra_mock.sql &&
+      /opt/mssql-tools/bin/sqlcmd -I -f 65001 -S mssql -U sa -P 'Ubb.Perfec2026' -i /db/02_vra.sql &&
       /opt/mssql-tools/bin/sqlcmd -I -f 65001 -S mssql -U sa -P 'Ubb.Perfec2026' -i /db/03_seed.sql
       "
     restart: "no"
