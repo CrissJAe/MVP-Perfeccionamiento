@@ -57,11 +57,11 @@ $web = new MockWeb($datosUsuario);
 
 $db = new DatabasePDO([
     'driver'   => 'Driver={ODBC Driver 18 for SQL Server}',
-    'host'     => 'mssql',
-    'port'     => 1433,
-    'database' => 'Perfeccionamiento',
-    'username' => 'sa',
-    'password' => 'Ubb.Perfec2026',
+    'host'     => getenv('DB_HOST') ?: 'localhost',
+    'port'     => getenv('DB_PORT') ?: 1433,
+    'database' => getenv('DB_NAME') ?: 'Perfeccionamiento',
+    'username' => getenv('DB_USER') ?: 'sa',
+    'password' => getenv('DB_PASS') ?: 'Ubb.Perfec2026',
     'options'  => [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     ],

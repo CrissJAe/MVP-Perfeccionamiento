@@ -24,7 +24,7 @@ $mapaRoles = [
     'DIRECTOR'  => 'Director/a de Departamento',
     'DECANO'    => 'Decano/a de Facultad',
     'COMITE'    => 'Comité de Perfeccionamiento',
-    'DDA'       => 'Director/a de Departamento', 
+    'DDA'       => 'Director/a de Departamento',
 ];
 
 if ($accion && $idSolicitud) {
@@ -62,12 +62,12 @@ if ($accion && $idSolicitud) {
             );
 
             if ($ok) {
-                $mensaje = match ($accion) {
+                $mensajes = [
                     'aprobar'  => 'Solicitud aprobada y derivada a la siguiente etapa.',
                     'rechazar' => 'Solicitud rechazada. Se notificó el motivo en el historial.',
                     'observar' => 'Observación registrada. El académico/a podrá corregir y reenviar.',
-                    default    => 'Acción realizada.'
-                };
+                ];
+                $mensaje = $mensajes[$accion] ?? 'Acción realizada.';
             } else {
                 $error = 'No se pudo procesar la acción. Intente nuevamente.';
             }

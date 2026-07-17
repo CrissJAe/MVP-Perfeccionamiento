@@ -1,5 +1,7 @@
 services:
   web:
+    environment:
+      DB_HOST: mssql
     volumes:
       - .:/var/www/perfeccionamiento
     depends_on:

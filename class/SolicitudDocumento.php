@@ -6,7 +6,7 @@ class SolicitudDocumento
 {
     private $db;
 
-    private const DIR_BASE = '/var/www/documentos/perfeccionamiento_academico/solicitudes/';
+    private const DIR_BASE = __DIR__ . '/../documentos/perfeccionamiento_academico/solicitudes/';
 
     public function __construct($db)
     {

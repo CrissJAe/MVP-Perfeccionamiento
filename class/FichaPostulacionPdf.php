@@ -8,7 +8,7 @@ class FichaPostulacionPdf
 {
     private $db;
 
-    private const DIR_BASE = '/var/www/documentos/perfeccionamiento_academico/solicitudes/';
+    private const DIR_BASE = __DIR__ . '/../documentos/perfeccionamiento_academico/solicitudes/';
 
     public function __construct($db)
     {
@@ -154,11 +154,11 @@ class FichaPostulacionPdf
     </tr>
     <tr>
         <td class="lbl" rowspan="2">Tipo de Jornada<br><span class="peq">(Marque con "x")</span></td>
-        <td>Completa <span class="chk">' . $marca(str_contains($jornada, 'complet')) . '</span></td>
+        <td>Completa <span class="chk">' . $marca(strpos($jornada, 'complet') !== false) . '</span></td>
         <td rowspan="2">Email: ' . $e($aca['email'] ?? '') . '</td>
     </tr>
     <tr>
-        <td>Media Jornada <span class="chk">' . $marca(str_contains($jornada, 'media')) . '</span></td>
+        <td>Media Jornada <span class="chk">' . $marca(strpos($jornada, 'media') !== false) . '</span></td>
     </tr>
 </table>
 
