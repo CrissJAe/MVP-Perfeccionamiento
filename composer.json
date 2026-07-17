@@ -3,10 +3,10 @@
     "description": "Módulo Perfeccionamiento Académico - UBB",
     "type": "project",
     "require": {
-        "php": "^8.2",
+        "php": ">=7.4",
         "smarty/smarty": "^4.5",
         "mpdf/mpdf": "^8.2",
-        "openspout/openspout": "^4"
+        "psr/log": "^1.1"
     },
     "autoload": {
         "psr-4": {
